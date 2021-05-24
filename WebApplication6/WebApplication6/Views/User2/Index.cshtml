@@ -1,0 +1,39 @@
+﻿@model List<WebApplication6.Models.Login>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/DashBoard.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>id</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Hours</th>
+        <th>Admin</th>
+        <th>Active</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Delete</th>
+        <th>Update</th>
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.id</td>
+            <td>@x.Firstname</td>
+            <td>@x.Lastname</td>
+            <td>@x.Hours</td>
+            <td>@x.Admin</td>
+            <td>@x.Active</td>
+            <td>@x.Username</td>
+            <td>@x.Password</td>
+            <td><a href="/DeleteUser/Index/@x.id" class="btn btn-danger">Delete</a></td>
+            <td><a href="/ShowUser/Index/@x.id" class="btn btn-success">Update</a></td>
+        </tr>
+    }
+
+</table>
+<a href="NewUser3" class="btn btn-primary">New User</a>
+

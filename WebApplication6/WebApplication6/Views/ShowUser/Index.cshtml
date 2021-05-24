@@ -1,0 +1,45 @@
+﻿@model WebApplication6.Models.Login
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/DashBoard.cshtml";
+}
+
+
+
+<br />
+@using (Html.BeginForm("Index", "UpdateUser", FormMethod.Post))
+{
+<b>id</b><br />
+@Html.TextBoxFor(x => x.id)
+<br />
+<br />
+<b>First Name</b><br />
+@Html.TextBoxFor(x => x.Firstname)
+<br />
+<br />
+<b>Last Name</b><br />
+@Html.TextBoxFor(x => x.Lastname)
+<br />
+<br />
+<b>Hours</b><br />
+@Html.TextBoxFor(x => x.Hours)
+<br />
+<br />
+<b>Admin</b><br />
+@Html.TextBoxFor(x => x.Admin)
+<br />
+<br />
+<b>Active</b><br />
+@Html.TextBoxFor(x => x.Active)
+<br />
+<br />
+<b>User Name</b><br />
+@Html.TextBoxFor(x => x.Username)
+<br />
+<br />
+<b>Password</b><br />
+@Html.TextBoxFor(x => x.Password)
+<br />
+<br />
+<button class="btn btn-info">Update User</button>
+}
